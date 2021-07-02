@@ -1,4 +1,4 @@
-# :satellite: Datascience stack
+# :rocket: Datascience stack
 
 This repo has as objective reduce the startup time for a prototype or EDA analysis. 
 
@@ -10,12 +10,14 @@ Some common libraries installed:
 - scikit-learn
 - Pandas
 - Dask
+- Opencv
 - S3 support with fsspect or boto3 library.
 
 For more details look at [pyproject.toml](pyproject.toml) or [requirements.txt](requirements.txt)
 
+For more *stacks* or context about this checkout [stacks](https://github.com/algorinfo/stacks)
 
-## FAQ
+## :checkered_flag: FAQ
 
 ### How to use
 
@@ -24,7 +26,7 @@ This project could be used as least in two ways:
 1. download and run the docker image from [nuxion/datascience](https://hub.docker.com/repository/docker/nuxion/python)
 
 ```
-docker run --rm -p 127.0.0.1:8888:8889 nuxion/datascience
+docker run --rm -p 127.0.0.1:8888:8888 nuxion/datascience
 ```
 
 Mounting a dir to keep state:
@@ -38,7 +40,7 @@ docker run --rm -p 127.0.0.1:8888:8889 -v <your_dir>:/app/notebooks nuxion/datas
 
 The entrypoint of the project is the jupyter lab environment but some batch task could run, dask and papermill are provided as dependencies for that purpose. Also, dask could be used inside the jupyter lab environment if some dataset is to big.
 
-Be warned that is not secure to expose this service to the world, so be carefull. By default if you use `make run`, docker only will be listening in your localhost interface. 
+:construction: Be warned that is not secure to expose this service to the world, so be carefull. By default if you use `make run`, docker only will be listening in your localhost interface. 
 
 
 ### What is the password for Jupyter lab and how could I change that?
@@ -72,6 +74,10 @@ As a rule thumb I stay two versions behind of the last release. The last python 
 
 Pandas pinned to version 1.2.5 [(june 22, 2021)](https://pandas.pydata.org/pandas-docs/stable/whatsnew/v1.2.5.html).
 
+### Dask warning the first time I start jupyer 
+
+You should enable manually the extensions in jupyter. This will be fixed in a next release.
+
 ### Why warning are raised when I run docker build
 
 Because all the python dependencies are installed in a intermediate image as root and then the packages downloaded or built in that image are copied to the final image with the correct user permissions, but `pip` warns about this first install as root. 
@@ -80,11 +86,16 @@ In this way if I change some code without adding or removing dependencies, then 
 
 Look at [use mult-stage build](https://docs.docker.com/develop/develop-images/multistage-build/) for more information. 
 
-## Some random features
+## :frog: Some random features
 
 - spacy small spanish corpus download inside of the docker image, look at `Dockerfile`, more models could be added.
+- Nodejs is installed, some more rich ui features could be expected.
+- Dask cluster manager plugin. Dask allows you scale out of core easily.
 
-## TODO
+## :octopus: Roadmap and todo
 
 - Evaluates [Intake project](https://github.com/intake/intake) for datasources or a custom solution using smartopen or fsspec (used by Intake and Kedro projects)
 - Add are easy way to get models like fastext.
+- Add checksums to download source like nodejs.
+- Add Vaex support.
+- Fix warning when jupyter is started the first time.
