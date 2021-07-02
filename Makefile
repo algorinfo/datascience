@@ -42,7 +42,7 @@ setup:
 
 .PHONY: run
 run:
-	docker run --rm -p 127.0.0.1:8000:8000 ${DOCKERID}/${PROJECTNAME}
+	docker run --rm -p 127.0.0.1:8889:8888 ${DOCKERID}/${PROJECTNAME}
 
 lock:
 	poetry export -f requirements.txt --output requirements.txt --without-hashes

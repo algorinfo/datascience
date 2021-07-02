@@ -323,6 +323,7 @@ python-versions = ">=3.7"
 
 [package.dependencies]
 cloudpickle = ">=1.1.1"
+distributed = {version = "2021.06.2", optional = true, markers = "extra == \"distributed\""}
 fsspec = ">=0.6.0"
 partd = ">=0.3.10"
 pyyaml = "*"
@@ -1813,7 +1814,7 @@ heapdict = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "4044504396afcdabc1475752c60d837d858df034a94a2116ed742c0f1b9363cb"
+content-hash = "8a258ef17d1d416715755668c717e61f68343026bbdd8ce5e789113c2b1b023d"
 
 [metadata.files]
 aiohttp = [

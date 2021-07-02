@@ -593,7 +593,7 @@ c.ExtensionApp.open_browser = False
 #  Local IP addresses (such as 127.0.0.1 and ::1) are allowed as local, along
 #  with hostnames configured in local_hostnames.
 #  Default: False
-# c.ServerApp.allow_remote_access = False
+c.ServerApp.allow_remote_access = True
 
 ## Whether to allow the user to run the server as root.
 #  Default: False
@@ -745,7 +745,7 @@ c.ExtensionApp.open_browser = False
 
 ## The IP address the Jupyter server will listen on.
 #  Default: 'localhost'
-# c.ServerApp.ip = 'localhost'
+c.ServerApp.ip = '0.0.0.0'
 
 ## Supply extra arguments that will be passed to Jinja environment.
 #  Default: {}
