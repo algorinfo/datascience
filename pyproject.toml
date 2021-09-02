@@ -23,7 +23,6 @@ psycopg2-binary = "^2.9.1"
 beautifulsoup4 = "^4.9.3"
 seaborn = "^0.11.1"
 boto3 = "^1.17.104"
-dask-labextension = "^5.0.2"
 numpy = "^1.21.0"
 distributed = "^2021.6.2"
 

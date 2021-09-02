@@ -99,3 +99,9 @@ Look at [use mult-stage build](https://docs.docker.com/develop/develop-images/mu
 - Add checksums to download source like nodejs.
 - Add Vaex support.
 - Fix warning when jupyter is started the first time.
+
+
+## :pushpin: Resources
+
+- [Docker caching model](https://pythonspeed.com/articles/docker-caching-model/)
+- [Commits and emojis](https://gitmoji.dev/)
