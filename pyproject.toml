@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "datascience"
-version = "0.1.0"
+version = "0.3.0"
 description = "Analytics for algorinfo"
 authors = ["nuxion <nuxion@gmail.com>"]
 license = "Apache-2.0"
@@ -25,6 +25,9 @@ seaborn = "^0.11.1"
 boto3 = "^1.17.104"
 numpy = "^1.21.0"
 distributed = "^2021.6.2"
+python-Levenshtein = "^0.12.2"
+ujson = "^4.1.0"
+lxml = "^4.6.3"
 
 [tool.poetry.dev-dependencies]
 
