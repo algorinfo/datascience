@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "datascience"
-version = "0.4.0"
+version = "0.5.0"
 description = "Analytics for algorinfo"
 authors = ["nuxion <nuxion@gmail.com>"]
 license = "Apache-2.0"
