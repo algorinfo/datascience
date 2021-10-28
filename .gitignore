@@ -336,3 +336,4 @@ tags
 
 # End of https://www.toptal.com/developers/gitignore/api/python,emacs,vim,visualstudiocode,jetbrains
 *.ipynb
+datasets/*.csv

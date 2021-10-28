@@ -86,6 +86,10 @@ In this way if I change some code without adding or removing dependencies, then 
 
 Look at [use mult-stage build](https://docs.docker.com/develop/develop-images/multistage-build/) for more information. 
 
+## Changelog
+
+- Pandas bumped to version 1.3.4, this allows the [use of new datatype](https://pythonspeed.com/articles/pandas-string-dtype-memory/): `string[pyarrow]`
+
 ## :frog: Some random features
 
 - spacy small spanish corpus download inside of the docker image, look at `Dockerfile`, more models could be added.
