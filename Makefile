@@ -50,11 +50,10 @@ lock:
 .PHONY: docker
 docker: 
 	docker build -t ${DOCKERID}/${PROJECTNAME} .
-
+	docker tag ${DOCKERID}/${PROJECTNAME} ${DOCKERID}/${PROJECTNAME}:$(VERSION) 
 
 .PHONY: release
 release: 
-	docker tag ${DOCKERID}/${PROJECTNAME} ${DOCKERID}/${PROJECTNAME}:$(VERSION) 
 	docker push ${DOCKERID}/$(PROJECTNAME):$(VERSION)
 
 .PHONY: tag
