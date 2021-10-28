@@ -89,6 +89,8 @@ Look at [use mult-stage build](https://docs.docker.com/develop/develop-images/mu
 ## Changelog
 
 - Pandas bumped to version 1.3.4, this allows the [use of new datatype](https://pythonspeed.com/articles/pandas-string-dtype-memory/): `string[pyarrow]`
+- jupyter-text added to pair *ipynb files with markdown or *.py
+- Jupyterlab bumped to 3.2.1
 
 ## :frog: Some random features
 
@@ -109,3 +111,4 @@ Look at [use mult-stage build](https://docs.docker.com/develop/develop-images/mu
 
 - [Docker caching model](https://pythonspeed.com/articles/docker-caching-model/)
 - [Commits and emojis](https://gitmoji.dev/)
+- [A jupyter lab workflow](https://blog.jupyter.org/ploomber-maintainable-and-collaborative-pipelines-in-jupyter-acb3ad2101a7)
