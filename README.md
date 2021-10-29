@@ -70,13 +70,9 @@ In Windows a [conda environment](https://docs.conda.io/en/latest/) could be a be
 The data stack world of python move fast. Deprecation warnings are allways attended by me when possible. Part of the intention of this image is to be sure of the dependencies. Some features like dask, depends on each node version of the libs installed there if not dask will not work. And other libraries like pandas, deprecate ways of do some things like: groupby and so forth. 
 
 Related to the python version:
-As a rule thumb I stay two versions behind of the last release. The last python version is `~3.10`, then I use `~3.8`
+As a rule of thumb I stay two versions behind of the last release for Python. The last python version is `~3.10`, then I use `~3.8`
 
-Pandas pinned to version 1.2.5 [(june 22, 2021)](https://pandas.pydata.org/pandas-docs/stable/whatsnew/v1.2.5.html).
 
-### Dask warning the first time I start jupyer 
-
-You should enable manually the extensions in jupyter. This will be fixed in a next release.
 
 ### Why warning are raised when I run docker build
 
@@ -91,6 +87,8 @@ Look at [use mult-stage build](https://docs.docker.com/develop/develop-images/mu
 - Pandas bumped to version 1.3.4, this allows the [use of new datatype](https://pythonspeed.com/articles/pandas-string-dtype-memory/): `string[pyarrow]`
 - jupyter-text added to pair *ipynb files with markdown or *.py
 - Jupyterlab bumped to 3.2.1
+- Set a specific gid and uid for the app user inside of the docker image. This is to share the same uuid and group than a nginx fileserver.
+
 
 ## :frog: Some random features
 

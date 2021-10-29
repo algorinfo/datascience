@@ -26,7 +26,8 @@ RUN apt-get update -yq\
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
     ## USER RELATED ACTIONS
-    && useradd -m -d /home/app app \
+    && groupadd app -g 1090 \
+    && useradd -m -d /home/app app -u 1089 -g 1090 \
     && mkdir /home/app/.local
 COPY --from=builder-science --chown=app:app /root/.local /home/app/.local/
 COPY --chown=app:app . /app
@@ -36,9 +37,7 @@ WORKDIR /app
 ENV PATH=$PATH:/home/app/.local/bin
 ENV PYTHONPATH=/app
 RUN python -m spacy download es_core_news_sm \
-    && jupyter labextension enable \
-    && jupyter labextension install dask-labextension \
-    && jupyter serverextension enable dask_labextension
+    && jupyter labextension enable 
 
 CMD ["jupyter", "lab", "--config", "conf/jupyter_lab_config.py"]
 
